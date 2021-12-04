@@ -1,0 +1,40 @@
+<label>Enter ISBN:</label>
+
+<!-- input allows User to manually enter ISBNs -->
+<input class="input" (input)="text = $event.target.value" />
+
+<!-- User can select a text file filled with ISBNs to submit -->
+<input type="file" (change)="fileChanged($event)" />
+
+<!-- Upload sends file to app.component.ts to be processed -->
+<button class="button" (click)="uploadDocument()">Upload</button>
+
+<!-- Submit adds ISBN from the input text box to ISBN array -->
+<button class="button" (click)="submit()">Submit</button>
+
+<!-- Prints contents of ISBN array -->
+<button class="button" (click)="display()">Display</button>
+
+<!-- Performs the different hash functions testing for speed and collision -->
+<button class="button" (click)="run()">Run</button>
+
+<!-- outputs come from .ts file -->
+<h1>{{outputText}}</h1>
+<br />
+<h1>{{outputList}}</h1>
+<br />
+
+<!-- linear function test outputs -->
+<h1>{{lHeader}}</h1>
+<h1>{{lCrash}}</h1>
+<h1>{{lTime}}</h1>
+
+<!-- quadratic function test outputs -->
+<h1>{{qHeader}}</h1>
+<h1>{{qCrash}}</h1>
+<h1>{{qTime}}</h1>
+
+<!-- double function test outputs -->
+<h1>{{dHeader}}</h1>
+<h1>{{dCrash}}</h1>
+<h1>{{dTime}}</h1>
